@@ -33,5 +33,14 @@
         <h2>Welcome to AllPhysics</h2>
         <p>Immerse in the phenomenous world of science.</p>
     </section>
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+    
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active'); // Alternar la clase 'active' para mostrar/ocultar
+        });
+    </script>
+    
 </body>
 </html>
