@@ -1,1 +1,24 @@
+# Directorios de dependencias
+node_modules/
+target/
+
+# Archivos de entorno
+.env
+
+# Archivos de configuración del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos generados por Java
+*.class
+
+# Archivos de IDE
+.idea/
+*.iml
+.vscode/
+
+# Archivos de log
+*.log
+
+# Archivos sensibles
 server.js
