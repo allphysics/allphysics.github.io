@@ -11,36 +11,62 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <java.version>17</java.version>
+        <spring-boot.version>3.0.0</spring-boot.version> <!-- Define the Spring Boot version here -->
     </properties>
+    
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.0</version> <!-- Especifica la versión directamente -->
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
     <dependencies>
         <!-- Aquí puedes añadir tus dependencias -->
 
-<!-- Add your dependencies here -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
-<dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
 
-    <groupId>org.junit.jupiter</groupId>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.8.1</version>
+            <scope>test</scope>
+        </dependency>
 
-    <artifactId>junit-jupiter-api</artifactId>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version> <!-- Verifica la última versión en el sitio de MySQL -->
+        </dependency>
 
-    <version>5.8.1</version>
-
-    <scope>test</scope>
-
-</dependency>
-
-<dependency>
-
-    <groupId>org.junit.jupiter</groupId>
-
-    <artifactId>junit-jupiter-engine</artifactId>
-
-    <version>5.8.1</version>
-
-    <scope>test</scope>
-
-</dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.28</version> <!-- Puedes usar la última versión disponible -->
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.0.33</version> <!-- Verifica la última versión en el sitio de MySQL -->
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
 
     </dependencies>
 
@@ -54,6 +80,11 @@
                     <source>17</source>
                     <target>17</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.0.0</version> <!-- Especifica la versión directamente -->
             </plugin>
         </plugins>
     </build>
