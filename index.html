@@ -1,64 +1,182 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AllPhysics - Science for Everyone</title>
+    <!-- Añade el favicon aquí -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Cambia la ruta según donde guardaste el favicon -->
+
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Estilo para el video de fondo */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            /* Asegúrate de que el video esté detrás del contenido */
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            /* Ocupa toda la altura de la ventana */
+            overflow: hidden;
+            /* Oculta cualquier parte del video que sobresalga */
+        }
+
+        /* Estilo para la cabecera */
+        .header-bg {
+            background: #0e0e0e;
+            /* Fondo oscuro */
+            border-bottom: 1px solid #3b82f6;
+            /* Borde inferior azul */
+            position: relative;
+            /* Cambiado a relativo */
+            z-index: 10;
+            /* Asegúrate de que la cabecera esté encima del video */
+        }
+
+        /* Estilo del título */
+        .hero-title {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+            /* Sombra para el texto */
+        }
+
+        .button {
+            background: linear-gradient(to right, #3b82f6, #1d4ed8);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background: linear-gradient(to right, #1d4ed8, #3b82f6);
+        }
+
+        .section-bg {
+            background-color: #1a1a1a;
+            /* Sección oscura */
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
+
+<body class="bg-gray-900 text-gray-100">
 
     <!-- Cabecera del sitio -->
-    <header class="bg-white shadow">
-        <div class="max-w-7xl mx-auto px-4 py-6">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <img src="images/logo.png" alt="AllPhysics Logo" class="h-10 w-10 mr-2"> 
-                    <h1 class="text-2xl font-bold">AllPhysics</h1>
-                </div>
-                <nav>
-                    <div class="menu-toggle" id="mobile-menu">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
-                    <ul class="nav-list flex space-x-4 hidden md:flex">
-                        <li><a href="#inicio" class="hover:underline">Home</a></li>
-                        <li><a href="#articulos" class="hover:underline">Articles</a></li>
-                        <li><a href="#ciencia" class="hover:underline">Science</a></li>
-                        <li><a href="#contacto" class="hover:underline">Contact</a></li>
-                    </ul>
-                </nav>
+    <header class="">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/logo.png" alt="AllPhysics Logo" class="h-12 w-12 mr-2">
+                <h1 class="text-3xl font-bold text-white">AllPhysics</h1>
             </div>
+            <nav>
+                <ul class="nav-list flex space-x-4">
+                    <li><a href="#inicio" class="text-white-700 hover:text-blue-600 transition-colors duration-300">Home</a></li>
+                    <li><a href="#articulos" class="text-white-700 hover:text-blue-600 transition-colors duration-300">Articles</a></li>
+                    <li><a href="#ciencia" class="text-white-700 hover:text-blue-600 transition-colors duration-300">Science</a></li>
+                    <li><a href="#contacto" class="text-white-700 hover:text-blue-600 transition-colors duration-300">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Sección principal -->
-    <section id="inicio" class="py-10 text-center">
-        <h2 class="text-4xl font-semibold">Welcome to AllPhysics</h2>
-        <p class="mt-4 text-lg">Dive into the phenomenal world of science.</p>
-    </section>
-
-    <section id="articulos" class="py-10">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-semibold mb-6 text-center">Articles</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Aquí puedes agregar artículos -->
-                <div class="bg-white p-4 rounded-lg shadow">
-                    <h3 class="font-bold">Artículo 1</h3>
-                    <p class="mt-2">Descripción breve del artículo 1.</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow">
-                    <h3 class="font-bold">Artículo 2</h3>
-                    <p class="mt-2">Descripción breve del artículo 2.</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow">
-                    <h3 class="font-bold">Artículo 3</h3>
-                    <p class="mt-2">Descripción breve del artículo 3.</p>
+    <!-- Sección de video y Portada-->
+    <section id="inicio" class="relative">
+        <div class="video-container">
+            <video autoplay muted loop class="video-background">
+                <source src="videos/space_movement.mp4" type="video/mp4"> <!-- Reemplaza esto con tu video -->
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+            <div class="flex items-center justify-center h-full text-left relative z-10">
+                <!-- Centrado en la caja, alineado a la izquierda -->
+                <div class="mt-5" style="display: inline;"> <!-- Margen superior para que esté debajo de la cabecera -->
+                    <h2 class="text-6xl font-semibold hero-title text-white">Welcome to AllPhysics</h2>
+                    <p class="mt-4 text-lg text-gray-200">Dive into the phenomenal world of science.</p>
+                    <a href="#articulos"
+                        class="mt-4 inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Explore
+                        Articles</a>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <!-- Sección de artículos -->
+    <section id="articulos" class="py-10 section-bg">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-semibold mb-6 text-center text-white">Featured Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-800 p-4 rounded-lg shadow">
+                    <h3 class="font-bold text-white">Artículo 1</h3>
+                    <p class="mt-2 text-gray-300">Descripción breve del artículo 1.</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded-lg shadow">
+                    <h3 class="font-bold text-white">Artículo 2</h3>
+                    <p class="mt-2 text-gray-300">Descripción breve del artículo 2.</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded-lg shadow">
+                    <h3 class="font-bold text-white">Artículo 3</h3>
+                    <p class="mt-2 text-gray-300">Descripción breve del artículo 3.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto" class="py-10 section-bg">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-semibold mb-6 text-center text-white">Contact Us</h2>
+            <form action="#" method="POST" class="bg-gray-800 p-6 rounded-lg shadow-md">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-gray-300">Name</label>
+                    <input type="text" id="name" name="name" required
+                        class="mt-1 block w-full border border-gray-700 bg-gray-900 text-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+                    <input type="email" id="email" name="email" required
+                        class="mt-1 block w-full border border-gray-700 bg-gray-900 text-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-sm font-medium text-gray-300">Message</label>
+                    <textarea id="message" name="message" required
+                        class="mt-1 block w-full border border-gray-700 bg-gray-900 text-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500"></textarea>
+                </div>
+                <button type="submit" class="button w-full">Send</button>
+            </form>
+        </div>
+    </section>
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="text-xl font-semibold">AllPhysics</h2>
+                    <p class="text-gray-400">Explorando el mundo de la ciencia.</p>
+                </div>
+                <div class="flex space-x-4 mb-4 md:mb-0">
+                    <a href="#articulos" class="hover:underline">Artículos</a>
+                    <a href="#ciencia" class="hover:underline">Ciencia</a>
+                    <a href="#contacto" class="hover:underline">Contacto</a>
+                    <a href="#" class="hover:underline">Política de Privacidad</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-4 pt-4 text-center">
+                <p class="text-gray-400">&copy; 2024 AllPhysics. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
         const mobileMenu = document.getElementById('mobile-menu');
@@ -69,4 +187,5 @@
         });
     </script>
 </body>
+
 </html>
