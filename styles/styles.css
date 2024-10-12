@@ -129,3 +129,22 @@ nav {
         position: static; /* Mantener la lista estática */
     }
 }
+
+.button {
+    background: linear-gradient(to right, #3b82f6, #1d4ed8);
+    border: none; /* Elimina el borde */
+    padding: 12px 24px; /* Ajusta el padding si es necesario */
+    border-radius: 4px; /* Redondea las esquinas */
+    color: white; /* Cambia el color del texto a blanco */
+    font-weight: bold; /* Aumenta el peso de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background 0.3s; /* Transición suave en el fondo */
+}
+
+.button:hover {
+    background: linear-gradient(to right, #1d4ed8, #3b82f6); /* Cambia el fondo al pasar el ratón */
+}
+
+.button:focus {
+    outline: none; /* Elimina el contorno al enfocar */
+}
