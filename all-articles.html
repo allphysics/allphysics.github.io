@@ -1,100 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AllPhysics - Science for Everyone</title>
+    <title>All Articles - AllPhysics</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <style>
-        .video-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
+        .section-bg {
+            background-color: #1a1a1a;
         }
-        .video-container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
-        .header-bg {
-            background: #0e0e0e;
-            border-bottom: 1px solid #3b82f6;
-            position: relative;
-            z-index: 10;
-        }
-        .hero-title {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-        }
+
         .button {
             background: linear-gradient(to right, #3b82f6, #1d4ed8);
             border: none;
-            padding: 8px 16px;
+            padding: 12px 24px;
             border-radius: 4px;
             color: white;
             font-weight: bold;
             cursor: pointer;
             transition: background 0.3s;
-            position: absolute;
         }
+
         .button:hover {
             background: linear-gradient(to right, #1d4ed8, #3b82f6);
         }
-        .section-bg {
-            background-color: #1a1a1a;
-        }
     </style>
 </head>
+
 <body class="bg-gray-900 text-gray-100">
     <header>
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center">
                 <a href="/"><img src="images/logo.png" alt="AllPhysics Logo" class="h-12 w-12 mr-2"></a>
-                <a href="/"><h1 class="text-3xl font-bold text-white">AllPhysics</h1></a>
+                <a href="/">
+                    <h1 class="text-3xl font-bold text-white">AllPhysics</h1>
+                </a>
             </div>
             <nav>
                 <ul class="nav-list flex space-x-4">
-                    <li><a href="#inicio" class="text-white-700 hover:text-blue-600 transition-colors duration-300">Home</a></li>
-                    <li><a href="all-articles.html" class="text-white-700 hover:text-blue-600 transition-colors duration-300">Articles</a></li>
-                    <li><a href="#ciencia" class="text-white-700 hover:text-blue-600 transition-colors duration-300">Science</a></li>
-                    <li><a href="contact.html" class="text-white-700 hover:text-blue-600 transition-colors duration-300">Contact</a></li>
+                    <li><a href="/"
+                            class="text-white-700 hover:text-blue-600 transition-colors duration-300">Home</a></li>
+                    <li><a href="all-articles.html"
+                            class="text-white-700 hover:text-blue-600 transition-colors duration-300">Articles</a></li>
+                    <li><a href="#ciencia"
+                            class="text-white-700 hover:text-blue-600 transition-colors duration-300">Science</a></li>
+                    <li><a href="contact.html"
+                            class="text-white-700 hover:text-blue-600 transition-colors duration-300">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="inicio" class="relative">
-        <div class="video-container">
-            <video autoplay muted loop class="video-background">
-                <source src="videos/space_movement.mp4" type="video/mp4">
-                Your navigator does not support the video tag.
-            </video>
-            <div class="flex items-center justify-center h-full text-left relative z-10">
-                <div class="mt-5" style="display: inline;">
-                    <h2 class="text-6xl font-semibold hero-title text-white">Welcome to AllPhysics</h2>
-                    <p class="mt-4 text-lg text-gray-200">Dive into the phenomenal world of science.</p>
-                    <a href="#articulos" class="mt-4 inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Explorar Artículos</a>
-                </div>
+    <section id="articulos" class="section-bg py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-white">All Articles</h2>
+            <div id="all-articles">
+                <!-- Aquí se cargarán los artículos con JavaScript -->
             </div>
         </div>
     </section>
 
-    <section id="articulos" class="section-bg py-20">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center text-white">Recent Articles</h2>
-            <div id="recent-articles" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                <!-- Aquí se cargarán los 3 artículos más recientes -->
-            </div>
-        </div>
-    </section>
-    
+
     <footer class="bg-gray-800 py-6 mt-10">
         <div class="max-w-7xl mx-auto text-center text-gray-400">
             <div class="mt-4">
@@ -122,8 +94,8 @@
             <p>&copy; 2024 AllPhysics. All rights reserved. Created by [polMarsol].</p>
         </div>
     </footer>
-    
-    
+
     <script src="app.js"></script>
 </body>
+
 </html>

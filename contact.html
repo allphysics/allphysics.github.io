@@ -1,62 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - AllPhysics</title>
+    <title>Contact - AllPhysics</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
 </head>
+
 <body class="bg-gray-900 text-gray-100">
     <div class="max-w-3xl mx-auto p-6 bg-gray-800 shadow-lg mt-10 rounded-lg">
-       
+
         <div class="flex items-center justify-center mb-6">
             <a href="/"><img src="/images/logo.png" alt="AllPhysics Logo" class="h-16 w-16"></a>
-            <a href="/"><h1 class="text-3xl font-bold text-white">AllPhysics</h1></a>
+            <a href="/">
+                <h1 class="text-3xl font-bold text-white">AllPhysics</h1>
+            </a>
         </div>
-        <h1 class="text-4xl font-bold text-center text-indigo-100 mb-6">Formulario de Contacto</h1>
+        <h1 class="text-4xl font-bold text-center text-indigo-100 mb-6">Contact form</h1>
         <form action="/contact" method="POST" class="bg-gray-800 p-6 rounded-lg shadow-md space-y-4">
             <div>
-                <label for="nombre" class="block text-sm font-medium text-gray-300">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required class="mt-1 block w-full px-4 py-3 border border-gray-700 bg-gray-700 text-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-500">
+                <label for="nombre" class="block text-sm font-medium text-gray-300">Name</label>
+                <input type="text" id="nombre" name="nombre" required
+                    class="mt-1 block w-full px-4 py-3 border border-gray-700 bg-gray-700 text-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-500">
             </div>
 
             <div>
-                <label for="apellido" class="block text-sm font-medium text-gray-300">Apellido</label>
-                <input type="text" id="apellido" name="apellido" required class="mt-1 block w-full px-4 py-3 border border-gray-700 bg-gray-700 text-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-500">
+                <label for="apellido" class="block text-sm font-medium text-gray-300">Surname</label>
+                <input type="text" id="apellido" name="apellido" required
+                    class="mt-1 block w-full px-4 py-3 border border-gray-700 bg-gray-700 text-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-500">
             </div>
 
             <div>
-                <label for="correo" class="block text-sm font-medium text-gray-300">Correo Electrónico</label>
-                <input type="email" id="correo" name="correo" required class="mt-1 block w-full px-4 py-3 border border-gray-700 bg-gray-700 text-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-500">
+                <label for="correo" class="block text-sm font-medium text-gray-300">Mail</label>
+                <input type="email" id="correo" name="correo" required
+                    class="mt-1 block w-full px-4 py-3 border border-gray-700 bg-gray-700 text-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-500">
             </div>
 
             <div>
-                <label for="asunto" class="block text-sm font-medium text-gray-300">Asunto</label>
-                <input type="text" id="asunto" name="asunto" required class="mt-1 block w-full px-4 py-3 border border-gray-700 bg-gray-700 text-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-500">
+                <label for="asunto" class="block text-sm font-medium text-gray-300">Subject</label>
+                <input type="text" id="asunto" name="asunto" required
+                    class="mt-1 block w-full px-4 py-3 border border-gray-700 bg-gray-700 text-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-500">
             </div>
 
             <div>
-                <label for="mensaje" class="block text-sm font-medium text-gray-300">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" required class="mt-1 block w-full px-4 py-3 border border-gray-700 bg-gray-700 text-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-500" rows="4"></textarea>
+                <label for="mensaje" class="block text-sm font-medium text-gray-300">Message</label>
+                <textarea id="mensaje" name="mensaje" required
+                    class="mt-1 block w-full px-4 py-3 border border-gray-700 bg-gray-700 text-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-500"
+                    rows="4"></textarea>
             </div>
 
             <div>
-                <label for="como-nos-conociste" class="block text-sm font-medium text-gray-300">¿Cómo nos has conocido?</label>
-                <select id="como-nos-conociste" name="como-nos-conociste" required class="mt-1 block w-full px-4 py-3 border border-gray-700 bg-gray-700 text-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-500">
+                <label for="como-nos-conociste" class="block text-sm font-medium text-gray-300">How did you know us?</label>
+                <select id="como-nos-conociste" name="como-nos-conociste" required
+                    class="mt-1 block w-full px-4 py-3 border border-gray-700 bg-gray-700 text-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-500">
                     <option value="internet">Internet</option>
-                    <option value="recomendacion">Recomendación</option>
-                    <option value="redes-sociales">Redes Sociales</option>
-                    <option value="otros">Otros</option>
+                    <option value="recomendacion">Recommendation</option>
+                    <option value="redes-sociales">Social networks</option>
+                    <option value="otros">Others</option>
                 </select>
             </div>
 
             <div>
-                <p class="text-sm text-gray-400">Al enviar este formulario, aceptas nuestra política de protección de datos. Consulta nuestras <a href="/politica-privacidad" class="text-indigo-400 underline">Condiciones de Privacidad</a>.</p>
+                <p class="text-sm text-gray-400">Al enviar este formulario, aceptas nuestra política de protección de
+                    datos. Consulta nuestras <a href="/politica-privacidad"
+                        class="text-indigo-400 underline">Condiciones de Privacidad</a>.</p>
             </div>
 
             <div class="flex items-center mb-4">
-                <input type="checkbox" id="acepto-condiciones" name="acepto-condiciones" required class="mr-2 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                <label for="acepto-condiciones" class="text-sm font-medium text-gray-300">He leído y acepto las condiciones</label>
+                <input type="checkbox" id="acepto-condiciones" name="acepto-condiciones" required
+                    class="mr-2 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                <label for="acepto-condiciones" class="text-sm font-medium text-gray-300">He leído y acepto las
+                    condiciones</label>
             </div>
 
             <div class="mb-4">
@@ -64,12 +82,42 @@
             </div>
 
             <div class="text-center">
-                <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition duration-200">Enviar</button>
+                <button type="submit"
+                    class="bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition duration-200">Send</button>
             </div>
         </form>
     </div>
-
+    <footer class="bg-gray-800 py-6 mt-10">
+        <div class="max-w-7xl mx-auto text-center text-gray-400">
+            <div class="mt-4">
+                <ul class="flex justify-center space-x-8">
+                    <li>
+                        <a href="https://github.com/polMarsol" target="_blank"
+                            class="flex items-center hover:text-blue-400">
+                            <i class="fab fa-github mr-2"></i>
+                            GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/pol-marsol-torras-0b232326b/" target="_blank"
+                            class="flex items-center hover:text-blue-400">
+                            <i class="fab fa-linkedin-in mr-2"></i>
+                            LinkedIn
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:polmarsoluni@gmail.com" class="flex items-center hover:text-blue-400">
+                            <i class="fas fa-envelope mr-2"></i>
+                            Mail
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p>&copy; 2024 AllPhysics. All rights reserved. Created by [polMarsol].</p>
+        </div>
+    </footer>
     <!-- Carga de la API de Google reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
+
 </html>
